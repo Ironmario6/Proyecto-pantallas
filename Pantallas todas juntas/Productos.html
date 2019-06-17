@@ -1,0 +1,228 @@
+<!doctype html>
+<html lang="en">
+
+
+
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.css" >
+    <!--Estilos personalizados-->
+    <link rel="stylesheet" href="css/styles.css">
+    <title>Productos</title>
+    <script language="JavaScript">
+
+
+            function enable_text(status)
+            {
+            status=!status;	
+                document.f1.other_text.disabled = status;
+            }
+            
+    </script>
+
+  </head>
+  <body onload=enable_text(false);>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark static-top">
+      <div class="container">
+        <a class="navbar-brand" href="#">
+              <img src="img/logo.png" alt="">
+            </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="index.html">Inicio
+                    <span class="sr-only">(current)</span>
+                  </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Sobre Nosotros</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Servicios</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Contacto</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="Login.html">Iniciar sesión</a>
+            </li>
+          </ul>
+          <nav class="navbar navbar-dark bg-dark">
+            <a class="navbar-brand"></a>
+            <form class="form-inline">
+              <input class="form-control mr-sm-2" type="search" placeholder="Buscar Aquí" aria-label="Search">
+              <button class="btn btn-success my-2 my-sm-0" type="submit">Buscar</button>
+            </form>
+          </nav>
+        </div>
+      </div>
+    </nav>
+<p></p>
+
+<section id="formularios">
+    <div id="accordion">
+        <div class="card">
+          <div class="card-header" id="headingOne">
+            <h5 class="mb-0">
+              <button class="btn btn-dark collapsed" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                Ingresar Producto Nuevo
+              </button>
+            </h5>
+          </div>
+      
+          <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
+            <div class="card-body">
+                
+               
+                <div class="row">
+
+                    <form name=f1 method=post>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   
+                            <input type="checkbox" name=others onclick="enable_text(this.checked)" >  Ingresar codigo manualmente
+                            <input type=text name=other_text>
+                    </form>
+                </div> 
+                
+                <div class="form-group col-md-4">
+                        <label for="inputState"></label>
+                        <select id="inputState" class="form-control">
+                          <option selected>Elegir sucursal...</option>
+                          <option>...</option>
+                        </select>
+                </div>
+
+                    
+                
+                        <div class="row">
+                            <div class="col-md-4">
+                              <input type="text" class="form-control" placeholder="Nombre producto">
+                            </div>
+                            
+                        </div>
+                
+                
+                      <div class="form-group">
+                        <label for="exampleFormControlTextarea1"></label>
+                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Descripción del producto"></textarea>
+                      </div>
+						
+                      <div class="row">
+                            <div class="col-md-1">
+                              <input type="text" class="form-control" placeholder="Precio">
+                            </div>
+
+                            <div class="col-md-2">
+                                    <input type="text" class="form-control" placeholder="En existencia">
+                            </div>
+                            
+                    </div>
+                    <p>
+			  
+                            <button type="button" class="btn btn-success">Aceptar</button>
+                            
+                            <button type="button" class="btn btn-danger">Cancelar</button>
+              
+              
+                    </p>
+
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-header" id="headingTwo">
+            <h5 class="mb-0">
+              <button class="btn btn-dark collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                Lista de productos
+              </button>
+            </h5>
+          </div>
+          <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+            <div class="card-body">
+                    <table id="example" class="table table-striped table-bordered" style="font-size:13px">
+                            <thead>
+                                <tr>
+                                    <th>Código</th>
+                                    <th>Sucursal</th>
+                                    <th>Nombre producto</th>
+                                    <th>Descripción de producto</th>
+                                    <th>Precio</th>
+                                    <th>Existencia</th>
+                                    <th>Opciones</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>970137962</td>
+                                    <td>Valparaiso</td>
+                                    <td>Mouse</td>
+                                    <td>Mouse usb 6 botones</td>
+                                    <td>2.500</td>
+                                    <td>100</td>
+                                    <td><button type="button" class="btn btn-success btn-sm">Editar</button>
+                                    <button type="button" class="btn btn-danger btn-sm">X</button></td>
+                                </tr>
+                                <tr>
+                                    <td>568754456745</td>
+                                    <td>Valparaiso</td>
+                                    <td>Teclado</td>
+                                    <td>Teclado usb mecánico</td>
+                                    <td>10.690</td>
+                                    <td>27</td>
+                                    <td><button type="button" class="btn btn-success btn-sm">Editar</button>
+                                      <button type="button" class="btn btn-danger btn-sm">X</button></td>
+                                </tr>
+                                <tr>
+                                    <td>445567458756</td>
+                                    <td>Valparaiso</td>
+                                    <td>Pantalla LCD</td>
+                                    <td>Pantalla LCD Resolución 1080p 144HZ</td>
+                                    <td>169.990</td>
+                                    <td>19</td>
+                                    <td><button type="button" class="btn btn-success btn-sm">Editar</button>
+                                      <button type="button" class="btn btn-danger btn-sm">X</button></td>
+                                </tr>
+                                <tr>
+                                    <td>880656742755</td>
+                                    <td>Valparaiso</td>
+                                    <td>Ram 8 GB</td>
+                                    <td>Memoria RAM DRR4 8 GB Kingston</td>
+                                    <td>43.890</td>
+                                    <td>11</td>
+                                    <td><button type="button" class="btn btn-success btn-sm">Editar</button>
+                                      <button type="button" class="btn btn-danger btn-sm">X</button></td>
+                                </tr>
+                                <tr>
+                                    <td>875656745445</td>
+                                    <td>Valparaiso</td>
+                                    <td>Tarjeta de video Nvidia</td>
+                                    <td>Tarjeta de video Nvidia GTX 108TI 8 GB</td>
+                                    <td>286.990</td>
+                                    <td>4</td>
+                                    <td><button type="button" class="btn btn-success btn-sm">Editar</button>
+                                        
+                                        <button type="button" class="btn btn-danger btn-sm">X</button></td>
+                                </tr>
+                                
+                        </table>
+            </div>
+          </div>
+        </div>
+        
+      </div>
+  
+
+</section>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="js/bootstrap.js" ></script>
+  </body>
+</html>
